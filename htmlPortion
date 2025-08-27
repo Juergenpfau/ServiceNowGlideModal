@@ -1,0 +1,17 @@
+<j:jelly xmlns:j="jelly:core" xmlns:g="glide">
+  <input type="hidden" id="sysparm_sys_id" value="${sysparm_sys_id}"/>
+  <g:ui_form>
+    <div style="padding:16px; max-width:640px;">
+      <h2 style="margin:0 0 12px;">Send Change Back to Draft</h2>
+      <p style="margin:0 0 16px;">Please provide a brief reason. This comment is required and will be saved to the record.</p>
+      <label for="revert_comment"><b>Comment (required)</b></label>
+      <textarea id="revert_comment" rows="5" style="width:100%;"></textarea>
+      <div style="margin-top:16px;">
+        <!-- NOTE: type="button" stops native form submit -->
+        <button type="button" id="btn_submit" class="btn btn-primary" onclick="submitRevert(event)">Submit</button>
+        <button type="button" id="btn_cancel" class="btn" onclick="closeModal(event)">Cancel</button>
+      </div>
+      <div id="error_msg" style="display:none; color:#b10e1e; margin-top:12px;"></div>
+    </div>
+  </g:ui_form>
+</j:jelly>
